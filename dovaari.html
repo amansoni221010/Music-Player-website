@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play free on mobile - Spotify - Spotify (IN)</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://wwwmarketing.scdn.co/img/favicon-96x96.png"
+      sizes="96x96"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/dovaari.css" />
+  </head>
+  <body>
+    <header>
+      <div class="xyz">
+        <div class="spoti"></div>
+        <div class="spotify-nav">
+          <div class="logo">
+            <a href="spotify.html">
+              <img src="image/download.png" alt="" />
+            </a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="premium.html">Premium</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="download.html">Download</a></li>
+              <li class="divider-vertical-second-menu">|</li>
+              <li><a href="signup.html">Sign up</a></li>
+              <li><a href="signin.html">Sign in</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <div class="dovaaricon"></div>
+      <div class="page-wrap-song_pg" id="21">
+        <div class="detail_wrap">
+          <ul class="breadcrum">
+            <li>
+              <a href="index.html" class="_link">
+                <span> Spotify </span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html" class="_link">
+                <span> Do Vaari Jatt Song </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="detail_wrap1" id="wrap1">
+            <div class="card-box">
+                <div class="card-element">
+                    <img src="image/song/4.webp" alt="">
+                    <div class="bracket" id="1234" style="background-color: #592200;">
+                        <div class="content-1">
+                            <p class="l1-1" style="color: whitesmoke">Do Vaari Jatt</p>
+                            <p class="l1" style="color: whitesmoke">Jordan Sandhu</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <div class="text1">
+            <p style="font-size: 25px; font-style: italic; font-weight: bold">
+                Do Vaari Jatt | Jordan Sandhu
+            </p>
+            <h1 style="padding-top: 25px">Do Vaari Jatt</h1>
+            <!-- Brahmastra20224 min 28 sec
+
+    Pritam,
+    Arijit Singh,
+    Amitabh Bhattacharya -->
+            <div style="padding-top: 20px; color: gray">
+              <span>Do Vaari Jatt ~</span>
+              <span>2021 ~</span>
+              <span>3 min 21 sec</span>
+            </div>
+            <p style="padding-top: 5px; color: gray">
+                Jordan Sandhu 
+            </p>
+            <div style="padding: 42px 17px 0 0">
+              <button
+                class="play"
+                style="
+                  background-color: red;
+                  width: 100px;
+                  height: 36px;
+                  border-radius: 20px;
+                  color: white;
+                  border: none;
+                "
+              >
+                Play Song
+              </button>
+              <!-- <button class="icon sm-hide" title="Add to favorites">
+                <svg class="fav " width="19" height="19" viewBox="0 0 19 19">
+                    <g fill="none" fill-rule="evenodd">
+                        <path class="svg_color" fill-rule="nonzero" d="M9 17.792l-1.208-1.1C3.5 12.8.667 10.225.667 7.083.667 4.508 2.683 2.5 5.25 2.5c1.45 0 2.842.675 3.75 1.733A5.011 5.011 0 0 1 12.75 2.5c2.567 0 4.583 2.008 4.583 4.583 0 3.142-2.833 5.717-7.125 9.609L9 17.792z">
+
+                        </path>
+                    </g>
+                </svg>
+            </button> -->
+              <a href="#" id="play-song" class="play-btn">
+                <span></span>
+              </a>
+              <div class="song-cont" id="song">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="song-cont play" id="song">
+      <div class="song">
+        <audio controls width="100">
+            <source src="song/Do Vaari.mp3" >
+            
+        </audio>
+
+        <a href="#" class="song-close">&times;
+
+        </a>
+    </div>
+</div>
+    </main>
+    <script>
+        document.getElementById("main").style.height="90vh"; 
+        document.getElementById("21").style.height="60vh"; 
+        document.getElementById("wrap1").style.height="56vh"; 
+       
+        const playBtn=document.getElementById("play-song");
+        const song=document.getElementById("song");
+        const actSong=document.querySelector("audio");
+        const close=document.querySelector(".song-close");
+        playBtn.addEventListener("click", ()=>{
+            song.classList.add('play');
+            playBtn.style.visibility="hidden";
+            actSong.play();
+        })
+        close.addEventListener("click",()=>{
+            song.classList.remove('play');
+            playBtn.style.visibility="visible";
+            actSong.pause();
+        })
+
+        
+    </script>
+  </body>
+</html>

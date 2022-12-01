@@ -1,0 +1,117 @@
+
+*{
+    outline: none;
+    box-sizing: border-box;
+}.panghatcon{
+    background-color: white;
+    /* width: 100%; */
+    height: 90px;;
+}
+.detail_wrap{
+    position: relative;
+}
+.detail_wrap ul{
+    display: flex;
+    align-items: center;
+}
+.detail_wrap ul li{
+    list-style: none;
+}
+.detail_wrap ul li a{
+    color: red;
+text-decoration: none;
+font-weight: 700;
+padding: 0 23px;
+display: inline-flex;
+}
+.detail_wrap ul li a span{
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+}
+.detail_wrap1{
+    display: flex;
+}
+.fav{
+    stroke: rgba(0,0,0,.8);
+    stroke-width: 1;
+    fill: unset !important;
+}
+.play-btn{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 32px;
+    height: 44px;
+    border-radius: 50%;
+    background: red;
+    padding: 10px 20px 10px 20px;
+    z-index: 10;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 50px;
+    margin-top: 17px;
+  
+}
+.play-btn::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    z-index: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: red;
+    animation: pulse 1500ms ease-out infinite;
+}
+.play-btn::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: red;
+   transition: all 200ms;
+}
+.play-btn span{
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    border-left: 32px solid white;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+}
+@keyframes pulse {
+    0%{
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.2);
+        opacity: .5;
+    }
+}
+.song audio{
+    width: 100%;
+}
+.song-close{
+   position: absolute;
+   top: 150px; 
+   right: 50px;
+   color:black ;
+   font-size: 3rem;
+   cursor: pointer;
+   text-decoration: none;
+   font-weight: bolder;
+}
